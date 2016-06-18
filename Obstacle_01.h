@@ -6,7 +6,7 @@
 #include "Obstacle_01.generated.h"
 
 /**
- * 
+ * Obstacle_01 gets level speed from EndlessRunnerGameMode and moves towards the player along the X axis at that speed
  */
 UCLASS()
 class ENDLESSRUNNER_API AObstacle_01 : public APaperSpriteActor
