@@ -11,8 +11,6 @@ UMovingPlatform::UMovingPlatform()
 	// off to improve performance if you don't need them.
 	bWantsBeginPlay = true;
 	PrimaryComponentTick.bCanEverTick = true;
-
-	// ...
 }
 
 
@@ -20,9 +18,7 @@ UMovingPlatform::UMovingPlatform()
 void UMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
-    
 }
-
 
 // Called every frame
 void UMovingPlatform::TickComponent( float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction )
