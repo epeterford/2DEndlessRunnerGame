@@ -6,8 +6,6 @@
 
 // The GameMode defines the game being played. It governs the game rules, scoring, what actors
 // are allowed to exist in this game type, and who may enter the game.
-//
-// This game mode just sets the default pawn to be the MyCharacter asset, which is a subclass of EndlessRunnerCharacter
 
 UCLASS(minimalapi)
 class AEndlessRunnerGameMode : public AGameMode
@@ -18,6 +16,8 @@ public:
     
     // Called when the game starts
     virtual void BeginPlay() override;
+    
+    // Called every frame
     virtual void Tick(float DeltaSeconds) override;
     
     // Is Game Started
@@ -25,12 +25,14 @@ public:
     
     float levelSpeed = 7.0f;
     
+    // Player's score
     UPROPERTY(VisibleAnywhere, BLueprintReadWrite, Category = PlayerScore)
     int32 levelScore;
     
-    /** Side view camera */
+    // Side view camera 
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera, meta=(AllowPrivateAccess="true"))
     class UCameraComponent* SideViewCameraComponent;
+
 private:
     float gameTime = 0.0f; 
 };
