@@ -5,7 +5,7 @@
 #include "PaperSpriteActor.h"
 #include "PaperPlatform.generated.h"
 /**
- *PaperPlatform gets level speed from EndlessRunnerGameMode and moves towards the player along the X axis
+ *PaperPlatform gets level speed from EndlessRunnerGameMode and moves towards the player along the X axis at that speed
  * Once the PaperPlatform passes a certain X position it destroys itself
  */
 UCLASS()
