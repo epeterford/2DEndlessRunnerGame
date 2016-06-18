@@ -6,6 +6,9 @@
 #include "MyPlatform.h"
 #include "LevelController.generated.h"
 
+/*
+LevelController spawns platforms when needed and determines how many obstacles(from 0-3) to spawn on each platform
+*/
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class ENDLESSRUNNER_API ALevelController : public AActor
 {
