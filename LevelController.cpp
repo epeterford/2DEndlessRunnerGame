@@ -20,7 +20,6 @@ ALevelController::ALevelController()
 void ALevelController::BeginPlay()
 {
 	Super::BeginPlay();
-    
 }
 
 // Called every frame
