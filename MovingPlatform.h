@@ -5,6 +5,9 @@
 #include "Components/ActorComponent.h"
 #include "MovingPlatform.generated.h"
 
+/*
+MovingPlatform gets the level speed from EndlessRunnerGameMode and moves that fast in the player's direction.  
+*/
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class ENDLESSRUNNER_API UMovingPlatform : public UActorComponent
 {
