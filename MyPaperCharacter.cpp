@@ -92,6 +92,7 @@ void AMyPaperCharacter::Tick(float DeltaSeconds)
     
 }
 
+// Player input setup
 void AMyPaperCharacter::SetupPlayerInputComponent(class UInputComponent* InputComponent)
 {
     // Cast to Game Mode
@@ -101,7 +102,6 @@ void AMyPaperCharacter::SetupPlayerInputComponent(class UInputComponent* InputCo
     if(! MyGameMode->bGameStarted)
     {
         // Setup input for Enter key to start the game
-        //InputComponent->BindKey(EKeys::Enter, IE_Pressed, this, &AMyPaperCharacter::StartGame);
         InputComponent->BindAction("StartGame", IE_Pressed, this, &AMyPaperCharacter::StartGame);
     }
     else // otherwise
