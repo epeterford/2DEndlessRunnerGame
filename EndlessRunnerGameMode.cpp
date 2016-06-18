@@ -14,9 +14,6 @@ void AEndlessRunnerGameMode::BeginPlay()
 {
     Super::BeginPlay();
     levelScore = 0;
-    
-    
-
 }
 
 void AEndlessRunnerGameMode::Tick(float DeltaSeconds)
@@ -25,31 +22,13 @@ void AEndlessRunnerGameMode::Tick(float DeltaSeconds)
     
     if(bGameStarted)
     {
-        gameTime += GetWorld()->GetDeltaSeconds()*2; // Ever half second
+        gameTime += GetWorld()->GetDeltaSeconds()*2; // Every half second
         
         if(gameTime >= 1) // Increase score by one every half second
         {
             levelScore += int32(gameTime);
             gameTime -= int32(gameTime);
         }
-        
-        /// Set speed based on score
-        /*if(levelScore>100)
-        {
-            levelSpeed = 10.0f;
-        }
-        else if(levelScore>75)
-        {
-            levelSpeed = 8.0f;
-        }
-        else if(levelScore>50)
-        {
-            levelSpeed = 6.5f;
-        }
-        else
-        {
-            levelSpeed = 5.0f;
-        }*/
     }
     
 }
