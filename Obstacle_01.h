@@ -7,6 +7,7 @@
 
 /**
  * Obstacle_01 gets level speed from EndlessRunnerGameMode and moves towards the player along the X axis at that speed
+ * Once Obstacle_01 moves past a certain X position it destroys itself
  */
 UCLASS()
 class ENDLESSRUNNER_API AObstacle_01 : public APaperSpriteActor
