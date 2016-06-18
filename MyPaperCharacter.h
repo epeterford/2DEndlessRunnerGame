@@ -6,7 +6,9 @@
 #include "MyPaperCharacter.generated.h"
 
 /**
- * 
+ * MyPaperCharacter sets up the player pawn used in the game.  
+ * Handles animation changes and overlap triggers for obstacles
+ * Player pawn is given input actions to start the game and jump
  */
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FStartGameEvent);
