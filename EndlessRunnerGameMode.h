@@ -7,6 +7,9 @@
 // The GameMode defines the game being played. It governs the game rules, scoring, what actors
 // are allowed to exist in this game type, and who may enter the game.
 
+/*
+This GameMode keeps track of the player's score, the speed of the level, and whether or not the game has started
+*/
 UCLASS(minimalapi)
 class AEndlessRunnerGameMode : public AGameMode
 {
