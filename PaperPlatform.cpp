@@ -4,13 +4,10 @@
 #include "PaperPlatform.h"
 #include "EndlessRunnerGameMode.h"
 
-
-
 APaperPlatform::APaperPlatform()
 {
     PrimaryActorTick.bCanEverTick = true;
-    platformSpeed = 2.0f;
-    GetRenderComponent()->SetMobility(EComponentMobility::Movable);
+    
     // Setup the assets
     struct FConstructorStatics
     {
@@ -23,18 +20,21 @@ APaperPlatform::APaperPlatform()
     
     static FConstructorStatics ConstructorStatics;
     
-    PaperSprite = ConstructorStatics.PlatformSpriteAsset.Get();
+    // Allow movement
+    GetRenderComponent()->SetMobility(EComponentMobility::Movable);
     
+    // Set sprite
+    PaperSprite = ConstructorStatics.PlatformSpriteAsset.Get();
     GetRenderComponent()->SetSprite(PaperSprite);
     
 }
 
 void APaperPlatform::BeginPlay()
 {
-    
     Super::BeginPlay();
-    SetActorLocation(FVector(GetActorLocation().X, 0, 77), true);
     
+    // Correctly position
+    SetActorLocation(FVector(GetActorLocation().X, 0, 77), true);
 }
 // Called every frame
 void APaperPlatform::Tick(float DeltaSeconds)
